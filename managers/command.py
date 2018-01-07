@@ -29,9 +29,4 @@ class CommandManager:
         # TODO: Add blacklisting
 
         ctx = await self.bot.get_context(msg)
-        return await ctx.invoke(ctx.command)
-
-
-
-
-
+        return await self.bot.invoke(ctx)
