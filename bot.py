@@ -1,5 +1,7 @@
 from discord.ext.commands import Bot
 from managers.command import CommandManager
+import yaml
+config = yaml.safe_load(open('./config.yml'))
 
 
 class BotClass(Bot):
@@ -16,4 +18,4 @@ class BotClass(Bot):
 
 
 bot = BotClass(command_prefix='kirby!', owner_id='188725806065909760')
-bot.run('MzQ0MDIzMzA5Mjk5NDgyNjI1.DTAn0w.C4vGSoBvpEy56SO4NfxoEdhmrGk')
+bot.run(config.token)
