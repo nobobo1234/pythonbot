@@ -25,6 +25,9 @@ class BotClass(Bot):
     async def on_message(self, msg):
         await self.command_system.handle_command(msg)
 
+    async def on_command_error(self, ctx, exception):
+        await ctx.send(exception)
+
 
 bot = BotClass(command_prefix='kirby!', owner_id='188725806065909760')
 bot.run(config['token'])

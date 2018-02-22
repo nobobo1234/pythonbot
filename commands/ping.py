@@ -8,8 +8,10 @@ class Ping:
 
     @commands.command()
     async def ping(self, ctx):
-        await ctx.send('Pong!')
-        print(ctx.args)
+        m = await ctx.send('Ping!')
+        await m.edit(
+            content=f'Pong, pong! I\'m still alive {(m.created_at-ctx.message.created_at).microseconds/1000}ms'
+        )
 
 
 def setup(bot):
