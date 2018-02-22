@@ -16,8 +16,8 @@ class BotClass(Bot):
 
     async def on_ready(self):
         app_info = await self.application_info()
-        self.owner_id = app_info.owner_id
-        self.app_id = app_info.owner_id
+        self.owner_id = app_info.owner.id
+        self.app_id = app_info.owner.id
         self.command_system.load_commands()
         print('Ready!')
         print(f'Invite url: {discord.utils.oauth_url(self.app_id)}')
@@ -27,4 +27,4 @@ class BotClass(Bot):
 
 
 bot = BotClass(command_prefix='kirby!', owner_id='188725806065909760')
-bot.run(config.token)
+bot.run(config['token'])

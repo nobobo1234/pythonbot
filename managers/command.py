@@ -1,5 +1,5 @@
 import os
-
+import discord.ext
 
 class CommandManager:
     def __init__(self, bot):
@@ -28,5 +28,10 @@ class CommandManager:
 
         # TODO: Add blacklisting
 
-        ctx = await self.bot.get_context(msg)
+        try:
+            ctx = await self.bot.get_context(msg)
+        except discord.ext.commands.errors.CommandNotFound:
+            return await self.bot.send(f'Command {ctx.command} is no command')  # is it ctx.command?
+
         return await self.bot.invoke(ctx)
+
