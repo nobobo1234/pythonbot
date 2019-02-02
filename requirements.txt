@@ -3,7 +3,7 @@ async-timeout==2.0.0
 asyncio==3.4.3
 chardet==3.0.4
 discord.py==1.0.0a1419+g30b5047
-idna==2.6
+idna==2.8
 multidict==3.3.2
 PyYAML==3.12
 websockets==3.4
