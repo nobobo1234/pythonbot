@@ -4,7 +4,7 @@ asyncio==3.4.3
 chardet==3.0.4
 discord.py==1.0.0a1419+g30b5047
 idna==2.8
-multidict==3.3.2
+multidict==4.5.2
 PyYAML==4.2
 websockets==3.4
 yarl==1.3.0
