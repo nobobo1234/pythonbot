@@ -7,4 +7,4 @@ idna==2.6
 multidict==3.3.2
 PyYAML==3.13
 websockets==3.4
-yarl==0.17.0
+yarl==1.3.0
